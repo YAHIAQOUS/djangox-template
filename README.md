@@ -1,3 +1,55 @@
+# Lab: 29 - DjangoX
+
+## Overview
+
+It is quite common to set up your Django projects the same way every time.
+
+Some of those common tasks are...
+
+- Create a custom user
+- Configure static assets
+- Add authentication
+- Set up styling
+- Install common libraries
+- Wire up 3rd party development tools
+
+Repeating these steps over and over violates the DRY (Don't Repeat Yourself) rule. So pro developers usually create a skeleton application they use to start off their projects.
+
+Luckily for us, there's already a great example of such a skeleton - [DjangoX](https://github.com/wsvincent/djangox){:target="\_blank"}
+
+## Feature Tasks and Requirements
+
+- Create a website using DjangoX as a template.
+  - Click the `Use this template` button on home page of DjangoX repository.
+- Name your repo whatever you like.
+- Create a Django app of your choosing.
+- The specific functionality of the site is up to you but should have a model that makes use of `get_user_model`
+
+## Implementation Notes
+
+DjangoX does not use poetry out of the box. So you'll need to look at the files DjangoX does use to see which dependencies are used.
+
+- View `Pipfile` and note the [packages] section.
+  - Use `poetry add` to install packages listed in Pipfile
+  - **NOTE:** Mac BigSur users may need to run extra command in case of installation errors.
+    - > export SYSTEM_VERSION_COMPAT=1
+- Delete the configuration files that aren't needed anymore since we're using Poetry
+  - Pipfile
+  - Pipfile.lock
+  - Dockerfile
+  - docker-compose.yml
+  - requirements.txt
+
+&nbsp;
+
+**PR Link**: <https://github.com/YAHIAQOUS/djangox-template/pull/1>
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
 > A batteries-included Django starter project. For a production-ready version see the book [Django for Professionals](https://djangoforprofessionals.com).
 
 ## 🚀 Features
@@ -10,22 +62,23 @@
 - Debugging with [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)
 - DRY forms with [django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms)
 
-![Homepage](homepage.png)
-----
+## ![Homepage](homepage.png)
 
 ## Table of Contents
-* **[Installation](#installation)**
-  * [Pip](#pip)
-  * [Pipenv](#pipenv)
-  * [Docker](#docker)
-* [Setup](#setup)
-* [Contributing](#contributing)
-* [Support](#support)
-* [License](#license)
 
-----
+- **[Installation](#installation)**
+  - [Pip](#pip)
+  - [Pipenv](#pipenv)
+  - [Docker](#docker)
+- [Setup](#setup)
+- [Contributing](#contributing)
+- [Support](#support)
+- [License](#license)
+
+---
 
 ## 📖 Installation
+
 DjangoX can be installed via Pip, Pipenv, or Docker depending upon your setup. To start, clone the repo to your local computer and change into the proper directory.
 
 ```
@@ -91,7 +144,7 @@ INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
 # Load the site at http://127.0.0.1:8000
 ```
 
-----
+---
 
 ## 🤝 Contributing
 
@@ -99,12 +152,11 @@ Contributions, issues and feature requests are welcome! See [CONTRIBUTING.md](ht
 
 ## ⭐️ Support
 
-Give a ⭐️  if this project helped you!
+Give a ⭐️ if this project helped you!
 
 ## License
 
 [The MIT License](LICENSE)
-
 
 <!-- ## Docker Usage
 ```
