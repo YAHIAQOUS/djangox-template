@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "djangox-template"
+version = "0.1.0"
+description = ""
+authors = ["Yahia Qous <yahiaqous@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "3.1.4"
+django-allauth = "0.43.0"
+django-crispy-forms = "1.10.0"
+django-debug-toolbar = "3.2"
+whitenoise = "5.2.0"
+
+[tool.poetry.dev-dependencies]
+black = "^21.8b0"
+flake8 = "^3.9.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
